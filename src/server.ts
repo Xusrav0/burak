@@ -7,3 +7,9 @@ console.log(currentTime)
 
 const person: string = 'Aaron';
 const count: number = 100;
+
+// Architectual Pattern: MVC, Dependency Injection, MVP
+
+// MVC = MODEL VIEW CONTROLLER
+
+// Design Pattern: Middleware, Decorator
