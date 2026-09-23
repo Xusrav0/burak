@@ -1,3 +1,5 @@
+/*
+
 // TASK K:
 // Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
 // MASALAN: countVowels("string") return 1;
@@ -17,3 +19,4 @@ function countVowels(str) {
 
 console.log(countVowels("string"));
 // console.log(countVowels("University"));
+*/

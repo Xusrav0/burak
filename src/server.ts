@@ -1,15 +1,6 @@
-console.log('EXECUTED!')
+// import moment from 'moment'  // <= bu modul js,  // common js const moment = require('moment')
+import dotenv from 'dotenv'
+dotenv.config();
 
-import moment from "moment";
-
-const currentTime = moment().format('YYYY-MM-DD')
-console.log(currentTime)
-
-const person: string = 'Aaron';
-const count: number = 100;
-
-// Architectual Pattern: MVC, Dependency Injection, MVP
-
-// MVC = MODEL VIEW CONTROLLER
-
-// Design Pattern: Middleware, Decorator
+console.log('PORT:',process.env.PORT)
+console.log('MONGO_URL:',process.env.MONGO_URL)
