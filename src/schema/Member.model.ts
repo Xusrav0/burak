@@ -11,7 +11,8 @@ const memberSchema = new Schema({
 
     memberStatus: {
         type: String,
-        enum: MemberStatus.ACTIVE
+        enum: MemberStatus,
+        default: MemberStatus.ACTIVE
     },
 
     memberNick: {
@@ -45,13 +46,13 @@ const memberSchema = new Schema({
     },
 
      memberPoints: {
-        type: String,
+        type: Number,
         default: 0,
     },
 
     
 },
 {timestamps: true} //UpdatedAt CreatedAt
-)
+);
 
 export default mongoose.model('Member', memberSchema)
