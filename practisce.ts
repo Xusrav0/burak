@@ -1,3 +1,15 @@
+/* Project Standarts
+ - Logging standarts
+ - Naming standats
+    function, method, variable => CAMEL case  goHome
+    class => PASCAL                           MemberService
+    folder, file => KEBAB
+    css => SNAKE                          
+ - Error handling
+*/
+
+
+
 // Compiled Languages: Java, GoLang, C, C++, C#, Rust  => Compiling(mashina tiliga o'giriladi) keyin Running bo'ladi 
 
 // Interpreted Languages: NodeJS, Python, PHP, Ruby    =>  Running
