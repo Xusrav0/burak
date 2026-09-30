@@ -1,4 +1,23 @@
 /*
+TASK P:
+
+Parametr sifatida yagona object qabul qiladigan function yozing.
+Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
+
+MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
+*/
+
+function objectToArray(obj) {
+  let result = [];
+  for (let key in obj) {
+    result.push([key, obj[key]]);
+  }
+  return result;
+}
+
+console.log(objectToArray({ a: 10, b: 20 }));
+
+/*
 TASK O:
 
 Shunday function yozing va u har xil qiymatlardan iborat array qabul qilsin.
@@ -11,20 +30,20 @@ Qolganlari nested bo'lib yoki type'lari number emas.
 
 */
 
-function calculateSumOfNumbers(arr) {
-    let sum = 0;
+// function calculateSumOfNumbers(arr) {
+//     let sum = 0;
 
-    for (let item of arr) {
-        if (typeof item === "number") {
-            sum += item;
-        }
+//     for (let item of arr) {
+//         if (typeof item === "number") {
+//             sum += item;
+//         }
 
-}
-return sum;
-}   
+// }
+// return sum;
+// }
 
-const result = calculateSumOfNumbers([10, "10", {son: 10}, true, 35]);
-console.log(result);
+// const result = calculateSumOfNumbers([10, "10", {son: 10}, true, 35]);
+// console.log(result);
 
 // TASK K:
 // Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
