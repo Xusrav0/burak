@@ -1,3 +1,29 @@
+/** TASK Q:
+
+Shunday function yozing, u 2 ta parametrga ega bo'lib
+birinchisi object, ikkinchisi string bo'lsin.
+Agar qabul qilinayotgan ikkinchi string, objectning
+biror bir propertysiga mos kelsa, 'true', aks holda mos kelmasa 'false' qaytarsin.
+
+MASALAN: hasProperty({ name: "BMW", model: "M3" }, "model"); return true;
+Ushbu misolda, 'model' string, objectning propertysiga mos kelganligi uchun 'true' natijani qaytarmoqda
+ */
+
+function hasProperty(obj, str) {
+  for (let key in obj) {
+    if (key === str) {
+      return true;
+    }
+  }
+  return false;
+}
+
+const result = hasProperty({ name: "BMW", model: "M3" }, "model");
+// const result1 = hasProperty({ company: "BMW", model: "M3" }, "name");
+
+console.log("result:", result);
+// console.log("result1:", result1);
+
 /*
 TASK P:
 
@@ -7,15 +33,15 @@ Qabul qilingan objectni nested array sifatida convert qilib qaytarsin
 MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]
 */
 
-function objectToArray(obj) {
-  let result = [];
-  for (let key in obj) {
-    result.push([key, obj[key]]);
-  }
-  return result;
-}
+// function objectToArray(obj) {
+//   let result = [];
+//   for (let key in obj) {
+//     result.push([key, obj[key]]);
+//   }
+//   return result;
+// }
 
-console.log(objectToArray({ a: 10, b: 20 }));
+// console.log(objectToArray({ a: 10, b: 20 }));
 
 /*
 TASK O:
