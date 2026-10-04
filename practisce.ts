@@ -13,6 +13,11 @@
   Modern FD => SPA (User) => React library
  */
 
+/** Cookie 
+ request join
+ self destroy
+*/
+
 // Compiled Languages: Java, GoLang, C, C++, C#, Rust  => Compiling(mashina tiliga o'giriladi) keyin Running bo'ladi
 
 // Interpreted Languages: NodeJS, Python, PHP, Ruby    =>  Running
