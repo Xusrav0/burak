@@ -22,7 +22,7 @@ const result = hasProperty({ name: "BMW", model: "M3" }, "model");
 // const result1 = hasProperty({ company: "BMW", model: "M3" }, "name");
 
 console.log("result:", result);
-// console.log("result1:", result1);
+console.log("result1:", result1);
 
 /*
 TASK P:
