@@ -1,3 +1,26 @@
+/**
+ * TASK R
+
+Shunday function yozing, u string parametrga ega bo'lsin.
+Agar argument sifatida berilayotgan string, "1 + 2" bo'lsa,
+string ichidagi sonlarni yig'indisni hisoblab, number holatida qaytarsin
+
+MASALAN: calculate("1 + 3"); return 4;
+1 + 3 = 4, shu sababli 4 natijani qaytarmoqda.
+ */
+
+function calculate(str) {
+  let sum = 0;
+  for (let char of str) {
+    if (char >= "0" && char <= "9") {
+      sum += Number(char);
+    }
+  }
+  return sum;
+}
+
+console.log(calculate("1 + 3"));
+
 /** TASK Q:
 
 Shunday function yozing, u 2 ta parametrga ega bo'lib
@@ -9,20 +32,20 @@ MASALAN: hasProperty({ name: "BMW", model: "M3" }, "model"); return true;
 Ushbu misolda, 'model' string, objectning propertysiga mos kelganligi uchun 'true' natijani qaytarmoqda
  */
 
-function hasProperty(obj, str) {
-  for (let key in obj) {
-    if (key === str) {
-      return true;
-    }
-  }
-  return false;
-}
+// function hasProperty(obj, str) {
+//   for (let key in obj) {
+//     if (key === str) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 
-const result = hasProperty({ name: "BMW", model: "M3" }, "model");
-// const result1 = hasProperty({ company: "BMW", model: "M3" }, "name");
+// const result = hasProperty({ name: "BMW", model: "M3" }, "model");
+// // const result1 = hasProperty({ company: "BMW", model: "M3" }, "name");
 
-console.log("result:", result);
-console.log("result1:", result1);
+// console.log("result:", result);
+// console.log("result1:", result1);
 
 /*
 TASK P:
