@@ -8,7 +8,7 @@
  - Error handling
 */
 
-/**
+/** Frontend Development (FD)
   Traditional FD => SSR (Admin) => EJS
   Modern FD => SPA (User) => React library
  */
@@ -16,6 +16,12 @@
 /** Cookie 
  request join
  self destroy
+*/
+
+/** VALIDATION
+  Frontend Validation
+  Backend Validation
+  Database Validation
 */
 
 // Compiled Languages: Java, GoLang, C, C++, C#, Rust  => Compiling(mashina tiliga o'giriladi) keyin Running bo'ladi
