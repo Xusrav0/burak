@@ -14,7 +14,7 @@ const productSchema = new Schema(
       default: ProductStatus.PAUSE,
     },
 
-    ProductCollection: {
+    productCollection: {
       type: String,
       enum: ProductCollection,
       required: true,
@@ -30,13 +30,18 @@ const productSchema = new Schema(
       required: true,
     },
 
+    productLeftCount: {
+      type: Number,
+      required: true,
+    },
+
     productSize: {
       type: String,
       enum: ProductSize,
       default: ProductSize.NORMAL,
     },
 
-    ProductVolume: {
+    productVolume: {
       type: String,
       enum: ProductVolume,
       default: ProductVolume.ONE,
@@ -52,7 +57,7 @@ const productSchema = new Schema(
       default: [],
     },
 
-    productView: {
+    productViews: {
       type: Number,
       default: 0,
     },
