@@ -1,3 +1,20 @@
+/**TASK T
+
+Shunday function tuzing, u sonlardan tashkil topgan 2'ta array qabul qilsin.
+Va ikkala arraydagi sonlarni tartiblab bir arrayda qaytarsin.
+
+MASALAN: mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]); return [0, 3, 4, 4, 6, 30, 31];
+
+Yuqoridagi misolda, ikkala arrayni birlashtirib, tartib raqam bo'yicha tartiblab qaytarmoqda. */
+
+function mergeSortedArrays(arr1: any, arr2: any): any {
+  let result = arr1.concat(arr2).sort((a: number, b: number) => {
+    return a - b;
+  });
+  return result;
+}
+console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]));
+
 /**TASK S:
 
 Shunday function yozing, u numberlardan tashkil topgan 
