@@ -1,7 +1,13 @@
 <%- include('includes/header') %>
 <body>
-  <div>Product PAGE</div>
-  <div><%=member.memberNick%></div>
+  <div>
+    <div>Product PAGE</div>
+    <div><%=member.memberNick%></div>
+
+    <% products.map((value,key) => { %>
+    <p><%= value.productName %> - <%= value.productSize %></p>
+    <% }) %>
+  </div>
 </body>
 
 <%- include('includes/footer') %>
