@@ -4,6 +4,7 @@ import MemberService from "../models/Member.service";
 import { AdminRequest, LoginInput, MemberInput } from "../libs/types/member";
 import { MemberType } from "../libs/enums/member.enum";
 import Errors, { HttpCode, Message } from "../libs/Errors";
+import { Error } from "mongoose";
 
 const restaurantController: T = {};
 const memberService = new MemberService();
@@ -44,6 +45,7 @@ restaurantController.processSignup = async (
 ) => {
   try {
     console.log("processSignup");
+    console.log("req.body:", req.body);
     const file = req.file;
     if (!file)
       throw new Errors(HttpCode.BAD_REQUEST, Message.SOMETHING_WENT_WRONG);
