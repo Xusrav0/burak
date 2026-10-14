@@ -6,15 +6,16 @@ console.log("Signup frontend javascript file");
 //   });
 // });
 
+$(function () {});
 $(function () {
-  const fileTarget = $(".file-box .upload-hidden"); // $(".file-box .upload-hidden")
+  const fileTarget = $(".file-box .upload-hidden"); // document.querySelector(".file-box .upload-hidden")
   let filename;
 
   fileTarget.on("change", function () {
     if (window.FileReader) {
       const uploadFile = $(this)[0].files[0];
       console.log("uploadFile:", uploadFile);
-      const fileType = uploadFile["type"];
+      const fileType = uploadFile["type"]; // uploadFile.type
       const validImageType = ["image/jpg", "image/jpeg", "image/png"];
       if (!validImageType.includes(fileType)) {
         alert("Please insert only jpeg, jpg and png");
