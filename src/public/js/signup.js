@@ -14,21 +14,23 @@ $(function () {
   fileTarget.on("change", function () {
     if (window.FileReader) {
       const uploadFile = $(this)[0].files[0];
+      if (!uploadFile) return;
+
       console.log("uploadFile:", uploadFile);
-      const fileType = uploadFile["type"]; // uploadFile.type
+      const fileType = uploadFile.type;
       const validImageType = ["image/jpg", "image/jpeg", "image/png"];
       if (!validImageType.includes(fileType)) {
         alert("Please insert only jpeg, jpg and png");
+        $(this).val("");
+        $(this).siblings(".upload-name").val("Choose image");
       } else {
-        if (uploadFile) {
-          console.log(URL.createObjectURL(uploadFile));
-          $(".upload-img-frame")
-            .attr("src", URL.createObjectURL(uploadFile))
-            .addClass("success");
-        }
-        filename = $(this)[0].files[0].name;
+        console.log(URL.createObjectURL(uploadFile));
+        $(".upload-img-frame")
+          .attr("src", URL.createObjectURL(uploadFile))
+          .addClass("success");
+        filename = uploadFile.name;
+        $(this).siblings(".upload-name").val(filename);
       }
-      $(this).siblings(".upload-name").val(filename); // imageni nomini chiqaradi
     }
   });
 });
@@ -53,12 +55,12 @@ function validateSignupForm() {
     return false;
   }
 
-  const memberImage = $(".member-image").get(0).files[0]
-    ? $(".member-image").get(0).files[0].name
-    : null;
+  const memberImageInput = $(".member-image").get(0);
+  const memberImage = memberImageInput?.files?.[0];
   if (!memberImage) {
     alert("Please insert restaurant image");
     return false; // backendga request qilmasligi uchun false
   }
   // Image Preloading
+  return true;
 }
