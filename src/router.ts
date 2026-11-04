@@ -30,7 +30,11 @@ router.get("/member/top-users", memberController.getTopUsers);
 
 /** PRODUCT **/
 router.get("/product/all", productController.getProducts); // router.get("/product/all/:key/:id", productController.getProducts)
-
+router.get(
+  "/product/:id",
+  memberController.retrieveAuth,
+  productController.getProduct,
+);
 /** ORDER **/
 
 export default router;
