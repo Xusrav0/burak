@@ -1,5 +1,9 @@
 import { ObjectId } from "mongoose";
-import { ProductCollection, ProductSize, ProductStatus } from "./product.enum";
+import {
+  ProductCollection,
+  ProductSize,
+  ProductStatus,
+} from "../enums/product.enum";
 
 export interface Product {
   _id: ObjectId;

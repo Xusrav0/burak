@@ -6,7 +6,7 @@ import {
   ProductInput,
   ProductInquiry,
   ProductUpdateInput,
-} from "../libs/enums/products";
+} from "../libs/types/products";
 import Errors, { HttpCode, Message } from "../libs/Errors";
 import { T } from "../libs/types/common";
 import ProductModel from "../schema/Product.model";

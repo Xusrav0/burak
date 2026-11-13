@@ -3,7 +3,7 @@ import Errors, { HttpCode, Message } from "../libs/Errors";
 import { T } from "../libs/types/common";
 import ProductService from "../models/Product.service";
 import { AdminRequest, ExtendedRequest } from "../libs/types/member";
-import { ProductInput, ProductInquiry } from "../libs/enums/products";
+import { ProductInput, ProductInquiry } from "../libs/types/products";
 import { ProductCollection } from "../libs/enums/product.enum";
 import { ExtendedError } from "socket.io";
 

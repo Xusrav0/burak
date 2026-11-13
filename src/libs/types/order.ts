@@ -1,6 +1,6 @@
 import { ObjectId } from "mongoose";
 import { OrderStatus } from "../enums/order.enum";
-import { Product } from "../enums/products";
+import { Product } from "./products";
 
 export interface OrderItem {
   _id: ObjectId;
